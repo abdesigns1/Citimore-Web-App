@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import { BiChevronLeft } from "react-icons/bi";
 import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
+import Link from "next/link";
+import { useRouter } from "next/navigation"; // Import useRouter
+import AddPhotoVideo from "./AddPhotoVideo";
 
 export default function NeedRoomWizard() {
+  const router = useRouter(); // Initialize router
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     roomType: "self-contained",
@@ -30,7 +34,27 @@ export default function NeedRoomWizard() {
       setCurrentStep(currentStep + 1);
     } else {
       console.log("Form submitted:", formData);
-      alert("Form submitted successfully!");
+
+      // Create query parameters from form data
+      const queryParams = new URLSearchParams({
+        name: encodeURIComponent(formData.contactName),
+        email: encodeURIComponent(formData.email),
+        phone: encodeURIComponent(formData.phone),
+        roomType: encodeURIComponent(formData.roomType),
+        location: encodeURIComponent(formData.location),
+        budget: encodeURIComponent(formData.budget),
+        moveInDate: encodeURIComponent(formData.moveInDate),
+        bedrooms: encodeURIComponent(formData.bedrooms),
+        bathrooms: encodeURIComponent(formData.bathrooms),
+        furnishing: encodeURIComponent(formData.furnishing),
+        amenities: encodeURIComponent(formData.amenities.join(",")),
+        gender: encodeURIComponent(formData.gender),
+        lifestyle: encodeURIComponent(formData.lifestyle.join(",")),
+        description: encodeURIComponent(formData.description),
+      }).toString();
+
+      // Redirect with form data as query params
+      router.push(`/AddPhotoVideo?${queryParams}`);
     }
   };
 

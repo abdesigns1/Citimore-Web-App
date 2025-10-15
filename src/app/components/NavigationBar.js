@@ -80,7 +80,7 @@ const NavigationBar = () => {
             </div>
 
             {/* Sign Up Button */}
-            <Link href="/signup">
+            <Link href="/SignupPage">
               <button className="bg-green-800 text-white px-4 py-2 rounded-3xl hover:bg-yellow-400 hover:text-green-900 transition-colors text-sm font-medium border-1">
                 Sign Up
               </button>

@@ -199,15 +199,15 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               {/* Left Card - Need a Room */}
               <Link href="/NeedARoom">
-                <div className="bg-green-800 rounded-2xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                <div className="bg-green-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-green-200 transition-colors">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-yellow-200 transition-colors">
                       Need a Room?
                     </h3>
                   </div>
 
                   <div className="text-center">
-                    <p className="text-white text-lg leading-relaxed group-hover:text-green-100 transition-colors">
+                    <p className="text-white text-lg leading-relaxed group-hover:text-yellow-200 transition-colors">
                       You already found a room but short on
                       <br />
                       funds and need a roommate to split the rent
@@ -218,15 +218,15 @@ const Home = () => {
 
               {/* Right Card - Need a Roommate */}
               <Link href="/find-room">
-                <div className="bg-green-600 rounded-2xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                <div className="bg-green-800 rounded-2xl shadow-lg border p-8 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-green-200 transition-colors">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-yellow-200 transition-colors">
                       Need a Roommate?
                     </h3>
                   </div>
 
                   <div className="text-center">
-                    <p className="text-white text-lg leading-relaxed group-hover:text-green-100 transition-colors">
+                    <p className="text-white text-lg leading-relaxed group-hover:text-yellow-200 transition-colors">
                       You need someone that already
                       <br />
                       found a room and is looking to split the rent

@@ -34,11 +34,11 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            "url('https://mshelhomes.com/real-estate/wp-content/uploads/2025/02/places-to-consider-if-you-are-moving-to-Abuja.png')",
+          backgroundImage: "url('/Hero Image.png')",
         }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Dark overlay   bg-black/20*/}
+        <div className="absolute inset-0"></div>{" "}
       </div>
 
       {/* Content */}
@@ -46,10 +46,10 @@ export default function HeroSection() {
         {/* Hero Text */}
         <div className="text-center mb-12">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4">
-            <span className="text-white">Co-Rent A</span>
+            <span className="text-green-900">Co-Rent A</span>
             <br />
             <span className="text-yellow-500">Home </span>
-            <span className="text-white">Today!</span>
+            <span className="text-green-900">Today!</span>
           </h1>
           <p className="text-xl md:text-2xl text-white font-medium mt-6">
             Find a room mate to split your
